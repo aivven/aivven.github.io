@@ -494,7 +494,12 @@ body {
 
 @media (max-width: 900px) {
   .page__container {
-    width: 80vw; } }
+    width: 80vw; }
+  body::after {
+    content: " ";
+    display: inline-block;
+    position: fixed;
+    height: 5vw; } }
 
 @media (orientation: landscape) and (max-width: 850px) {
   .footer {
@@ -574,7 +579,7 @@ body {
       display: inline-block;
       position: relative;
       width: 100vw;
-      padding-bottom: 10px; } }
+      padding-bottom: 5px; } }
 
 @media (orientation: landscape) and (max-width: 500px) {
   .logo {
@@ -600,10 +605,10 @@ body {
       width: 25px;
       height: 5px;
       background-color: #fb5a00;
-      top: 5px;
-      left: -6px;
-      -webkit-transform: rotate(-45deg);
-              transform: rotate(-45deg); }
+      top: 0px;
+      left: -20px;
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg); }
     .menu__button::after {
       content: " ";
       display: inline-block;
@@ -611,11 +616,38 @@ body {
       width: 25px;
       height: 5px;
       background-color: #fb5a00;
-      top: 0px;
-      left: -6px;
-      -webkit-transform: rotate(45deg);
-              transform: rotate(45deg); }
+      top: 5px;
+      left: -20px;
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg); }
+  .menu--open .menu__button::before {
+    content: " ";
+    display: inline-block;
+    position: relative;
+    width: 25px;
+    height: 5px;
+    background-color: #fb5a00;
+    top: 5px;
+    left: -20px;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg); }
+  .menu--open .menu__button::after {
+    content: " ";
+    display: inline-block;
+    position: relative;
+    width: 25px;
+    height: 5px;
+    background-color: #fb5a00;
+    top: 0px;
+    left: -20px;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg); }
   .menu__list {
+    display: none; }
+  .menu--open .menu__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     width: 22vw;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
