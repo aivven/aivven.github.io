@@ -499,7 +499,8 @@ body {
     content: " ";
     display: inline-block;
     position: fixed;
-    height: 5vw; } }
+    height: 10vw;
+    max-height: 58px; } }
 
 @media (orientation: landscape) and (max-width: 850px) {
   .footer {
@@ -573,13 +574,7 @@ body {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
     margin-left: 0;
-    margin-top: 0; }
-    .logo::after {
-      content: " ";
-      display: inline-block;
-      position: relative;
-      width: 100vw;
-      padding-bottom: 5px; } }
+    margin-top: 0; } }
 
 @media (orientation: landscape) and (max-width: 500px) {
   .logo {
